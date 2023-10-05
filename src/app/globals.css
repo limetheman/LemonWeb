@@ -2,26 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+div#left {
+  flex-grow: 0;
+  background-color: green;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+div#content {
+  animation: fadeInOut moveLeft300px bounce;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+div#right{
+  flex-grow: 0;
+  background-color: cyan;
 }
+
+div#content header {
+  flex-grow: 0;
+  font-size: 7em;
+  text-align: center;
+
+}
+
+div#content div.mainbody{
+  flex-grow: 1;
+  margin: 1em;
+  margin-bottom: 0;
+  background-color: magenta;
+
+}
+
+.Home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#header {
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+}
+
+
+
+
+
