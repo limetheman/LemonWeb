@@ -1,16 +1,15 @@
 'use client'
-import { Box, Button, ChakraProvider, Divider, Heading, SlideFade, Container, Text, useDisclosure, Image, Flex, Skeleton, SimpleGrid } from "@chakra-ui/react";
+import { Box, Button, ChakraProvider, Divider, Heading, SlideFade, Container, Text, useDisclosure, Image, Flex, Skeleton, SimpleGrid, AbsoluteCenter } from "@chakra-ui/react";
 import { CacheProvider } from "@emotion/react";
 import React from "react";
-import BuddyLogo from "../../public/studyBuddy.png"
-import ProfilePicture from "../../public/SElfie.jpg"
-import { AnimatedText } from "./Components/animatedText";
 import Navbar from "./Components/Navbar";
+import ProjectCard from "./Components/ProjectCard";
+import { TypeAnimation } from 'react-type-animation';
+import { Reveal } from "./Components/Reveal";
+
 
 export default function Home() {
   const { isOpen, onToggle } = useDisclosure()
-  const wordChanged = (newIndex: number) => {
-  };
 
   const ImageStyles = {
     
@@ -19,37 +18,111 @@ export default function Home() {
 
   return (
     <Box maxHeight="100%" bgGradient="linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% )">
-      <Navbar/>
-      <Container as="div" maxW="80%">
+      <Container as="div" maxW="70%">
+      <Navbar />
         <Flex id="header">
-          <Heading as="h1" marginBottom="0.5px" size="2xl" my="30px" p="10px">
-            Hello👋, My Name is Liem!
-          </Heading>
-          <Text fontSize="xl">A Computer Science Student at the University of Minnesota</Text>
-          <Divider margin="5px" color="black"/>
-          <Image src={ProfilePicture.src} alt="Selfie!" height="150px" borderRadius="full" alignSelf="center" margin="auto"/>
-            <AnimatedText wordChangedCallback={wordChanged}/>
+        <Divider margin="10px"/>
+          <Reveal>
+            <Heading as="h1" size="2xl" my="10px" p="10px">
+              👋Hi, My Name is Liem!
+            </Heading>
+          </Reveal>
+          <Image src="/Selfie.jpg" alt="Selfie!" height="150px" borderRadius="full" alignSelf="center" margin="auto"/>
         </Flex>
-        <Box maxW='100%'>
-          <Heading>
+        <Container maxW='100%'>
+        <Box maxW='100%'alignContent="center">
+          <Reveal>
+            <Heading id="aboutme" marginTop="10px">
+              About Me
+            </Heading>
+          </Reveal>
+          <Divider margin="10px"/>
+          <Flex justifyContent="center">
+            <Text 
+              fontSize="2xl">
+                
+            </Text>
+          </Flex>
+          <Reveal>
+            <Heading id="experience" marginTop="10px">
+              Experience
+            </Heading>
+          </Reveal>
+          <Divider my="15px"/>
+          <SimpleGrid minChildWidth="300px" alignItems="center" margin="auto" spacing={50}>
+              <Reveal>
+                <ProjectCard
+                  headingText="Software Enginner Intern"
+                  imgSrc="/autonomic.jpg"
+                  altSrc="Autonomic Solutions LLC logo"
+                  bodyText="Created interactive pages within the Autonomic website using AngularJS, worked with Spring Boot backend and created REST API POST, GET, and PUT endpoints."
+                  frameworkText="AngularJS REST-API Spring-Boot AWS-DynamoDB"
+                />
+              </Reveal>
+              <Reveal>
+                <ProjectCard
+                  headingText="Vice-President"
+                  imgSrc="/ADC2logo.png"
+                  altSrc="App Developer's Club Logo"
+                  bodyText="Current Vice President of ADC, handling internal tasks, such as budget management, leading weekly meetings, and managing sponsorships, while delegating additional workload to club officers"
+                  frameworkText="App Developer's Club"
+
+                
+                />
+              </Reveal>
+              <Reveal>
+                <ProjectCard
+                  headingText="Teaching Assistant"
+                  imgSrc="/umn.jpg"
+                  altSrc="University of Minnesota Logo"
+                  bodyText="Facilitated lab sessions and conducted weekly office hours to reinforce student understanding of Python-based course material"
+                  frameworkText="CSCI 1133 - Python"
+                />
+              </Reveal>
+            </SimpleGrid>
+        </Box>
+        <Divider marginY="100px"/>
+        <Reveal>
+          <Heading id="projects">
             Projects
           </Heading>
-          <Divider/>
-          <SimpleGrid columns={2} spacing={10}>
-            
+        </Reveal>
+          <Divider my="15px"/>
+          <SimpleGrid minChildWidth="300px" spacing={10}>
+            <Reveal>
+              <ProjectCard 
+                headingText="Study Buddy" 
+                imgSrc="/studyBuddy.png" 
+                altSrc="Study Buddy Logo"
+                bodyText="Developed a social media application to connect students and tutors"
+                frameworkText="React JavaScript Django"
+                link="https://devpost.com/software/studybuddy-okrtx4"
+                />
+            </Reveal>
+            <Reveal>
+              <ProjectCard
+                headingText="Back To Hue"
+                imgSrc="/BackToHue.png"
+                altSrc="Back To Hue Logo"
+                bodyText="Created a mobile application that helps connect with the people around you"
+                frameworkText="React-Native JavaScript Firebase"
+                link="https://back-to-hue-website-fy2r.vercel.app/index.html"
+              />
+            </Reveal>
+            <Reveal>
+              <ProjectCard
+                headingText="Red Envelope"
+                imgSrc="/redenvelope.png"
+                altSrc="Red Envelope from Creazilla.com"
+                bodyText="Currently developing a mobile money transfer application, creating a satisfying and creative new way of celebrating New Years"
+                frameworkText="React-native JavaScript Dwolla"
+                link="#"
+              />
+            </Reveal>
           </SimpleGrid>
-        </Box>
+        </Container>
         <Box maxW='100%'>
-          <Heading>
-            Outreach
-          </Heading>
-          <Divider/>
-          <SimpleGrid columns={2} spacing={10}>
-
-          </SimpleGrid>
-        </Box>
-        <Box maxW='100%'>
-          <Heading>
+          <Heading id="contact">
             Contact
           </Heading>
           <Divider/>

@@ -1,4 +1,4 @@
-import { Box, Button, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList, TableContainer } from '@chakra-ui/react'
+import { Box, Button, Divider, Flex, IconButton, Link, Menu, MenuButton, MenuItem, MenuList, TableContainer } from '@chakra-ui/react'
 import React from 'react'
 import { Icon } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
@@ -8,30 +8,12 @@ import { Container } from '@chakra-ui/react'
 
 export default function Navbar() {
   return (
-    <Flex as="nav" bg="gray.200" justify="space-around">
-        <Menu>
-          <MenuButton
-            as={IconButton}
-            _hover={{bg: "gray.400"}}
-            aria-label="Options"
-            icon={<HamburgerIcon/>}
-          />
-          <MenuList>
-            <MenuItem onClick={() => alert("About Me")}>
-              About Me
-            </MenuItem>
-            <MenuItem onClick={() => alert("Projects")}>
-              Projects
-            </MenuItem>
-            <MenuItem onClick={() => alert("Outreach")}>
-              Outreach
-            </MenuItem>
-            <MenuItem onClick={() => alert("Contact")}>
-              Contact
-            </MenuItem>
-          </MenuList>
-        </Menu>
-      <Button margin={"auto"} _hover={{bg: "gray.400"}} >Liem Tran</Button>
+    <Flex as="nav" minHeight="10px" maxW="100%" justifyContent="space-between" alignItems="center">
+      <Link href='#aboutme' fontSize="lg">About Me</Link>
+      <Link href='#experience' fontSize="lg">Experience</Link>
+      <Link href='#' fontSize="lg" fontWeight="light">Liem Tran</Link>
+      <Link href='#projects' fontSize="lg">Projects</Link>
+      <Link href='#contact' fontSize="lg">Contact</Link>
     </Flex>
   )
 }
