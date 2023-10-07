@@ -17,7 +17,10 @@ export default function Navbar() {
         right="1rem"
         >
           <Flex
-            display={['none', 'none', 'flex', 'flex']}>
+            display={['none', 'none', 'flex', 'flex']}
+            border="1px"
+            borderRadius="full"
+            >
               <NextLink href="#" passHref={true}>
                 <Button 
                   variant="ghost"
