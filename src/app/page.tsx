@@ -1,11 +1,12 @@
 'use client'
-import { Box, Button, ChakraProvider, Divider, Heading, SlideFade, Container, Text, useDisclosure, Image, Flex, Skeleton, SimpleGrid, AbsoluteCenter, Highlight, Tag } from "@chakra-ui/react";
+import { Box, Button, ChakraProvider, Divider, Heading, SlideFade, Container, Text, useDisclosure, Image, Flex, Skeleton, SimpleGrid, AbsoluteCenter, Highlight, Tag, LinkOverlay } from "@chakra-ui/react";
 import { CacheProvider } from "@emotion/react";
 import React from "react";
 import Navbar from "./Components/Navbar";
 import ProjectCard from "./Components/ProjectCard";
 import { TypeAnimation } from 'react-type-animation';
 import { Reveal } from "./Components/Reveal";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -139,12 +140,12 @@ export default function Home() {
             Contact
           </Heading>
           <Divider my="15px"/>
-          <SimpleGrid minChildWidth="50px" spacing={10}>
-          <Button colorScheme='teal' variant='outline'>Button</Button>
-          <Button colorScheme='teal' variant='outline'>Button</Button>
-          <Button colorScheme='teal' variant='outline'>Button</Button>
-          <Button colorScheme='teal' variant='outline'>Button</Button>
-          <Button colorScheme='teal' variant='outline'>Button</Button>
+          <SimpleGrid minChildWidth="px" spacing={5}>
+            <Button colorScheme='black' variant='outline'>Github</Button>
+            <Button colorScheme="linkedin" variant='outline'>Linkedin</Button>
+            <Button colorScheme='messenger' variant='outline'>Instagram</Button>
+            <Button colorScheme='twitter' variant='outline'>Twitter</Button>
+            <Button colorScheme='facebook' variant='outline'>Facebook</Button>
           </SimpleGrid>
         </Box>
       <Box height="200px">
