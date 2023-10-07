@@ -18,29 +18,25 @@ export default function Home() {
 
   return (
     <Box maxHeight="100%" bgGradient="linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% )">
-      <Container as="div" maxW="70%">
+      <Container as="div" maxW="80%">
       <Navbar />
-        <Flex id="header">
+        <Flex id="header" justifyContent={"center"}>
         <Divider margin="10px"/>
           <Reveal>
-            <Heading as="h1" size="2xl" my="10px" p="10px">
+            <Heading as="h1" size="2xl" my="10px" p="10px" noOfLines={1}>
               👋Hi, My Name is Liem!
             </Heading>
           </Reveal>
           <Image src="/Selfie.jpg" alt="Selfie!" height="150px" borderRadius="full" alignSelf="center" margin="auto"/>
+          <Divider margin="auto" width="20%" my="20px"/>
         </Flex>
         <Container maxW='100%'>
-        <Box maxW='100%'alignContent="center">
-          <Reveal>
-            <Heading id="aboutme" marginTop="10px">
-              About Me
-            </Heading>
-          </Reveal>
-          <Divider margin="10px"/>
+        <Container marginTop="50px" maxW='100%'alignContent="center">
           <Flex justifyContent="center">
-            <Text fontSize="3xl" fontWeight={100}>
+            <Heading fontSize="4xl" fontWeight={100} noOfLines={2}>
               Interested in:
               <Tag fontSize="4xl" variant='subtle' colorScheme='blue'>
+                
                 <TypeAnimation
                   sequence={[
                     "Full Stack Development",
@@ -55,20 +51,20 @@ export default function Home() {
                     1000,
                   ]}
                   wrapper="span"
-                  speed={50}
+                  speed={40}
                   style={{display:'inline-block'}}
                   repeat={Infinity}
                   />
               </Tag>
-            </Text>
+            </Heading>
           </Flex>
           <Reveal>
-            <Heading id="experience" marginTop="10px">
+            <Heading id="experience" marginTop="150px">
               Experience
             </Heading>
           </Reveal>
           <Divider my="15px"/>
-          <SimpleGrid minChildWidth="300px" alignItems="center" margin="auto" spacing={50}>
+          <SimpleGrid minChildWidth="300px" alignItems="center" margin="auto" spacing={10}>
               <Reveal>
                 <ProjectCard
                   headingText="Software Enginner Intern"
@@ -99,7 +95,7 @@ export default function Home() {
                 />
               </Reveal>
             </SimpleGrid>
-        </Box>
+        </Container>
         <Divider marginY="100px"/>
         <Reveal>
           <Heading id="projects">
@@ -139,15 +135,15 @@ export default function Home() {
               />
             </Reveal>
           </SimpleGrid>
+
         </Container>
         <Box maxW='100%'>
           <Heading id="contact">
             Contact
           </Heading>
           <Divider/>
-          <SimpleGrid columns={2} spacing={10}>
-            
-            </SimpleGrid>
+          <SimpleGrid minChildWidth="50px" spacing={10}>
+          </SimpleGrid>
         </Box>
       </Container>
     </Box>
