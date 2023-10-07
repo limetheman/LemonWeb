@@ -10,13 +10,6 @@ import Link from "next/link";
 
 
 export default function Home() {
-  const { isOpen, onToggle } = useDisclosure()
-
-  const ImageStyles = {
-    
-  }
-
-
   return (
     <Box maxHeight="100%" bgGradient="linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% )">
       <Container as="div" maxW="80%">
