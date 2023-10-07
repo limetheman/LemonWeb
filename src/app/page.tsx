@@ -23,7 +23,7 @@ export default function Home() {
         <Flex id="header" justifyContent={"center"}>
         <Divider margin="10px"/>
           <Reveal>
-            <Heading as="h1" size="2xl" my="10px" p="10px" noOfLines={1}>
+            <Heading as="h1" size="2xl" my="10px" p="10px">
               👋Hi, My Name is Liem!
             </Heading>
           </Reveal>
@@ -33,7 +33,7 @@ export default function Home() {
         <Container maxW='100%'>
         <Container marginTop="50px" maxW='100%'alignContent="center">
           <Flex justifyContent="center">
-            <Heading fontSize="4xl" fontWeight={100} noOfLines={2}>
+            <Heading fontSize="4xl" fontWeight={100}>
               Interested in:
               <Tag fontSize="4xl" variant='subtle' colorScheme='blue'>
                 
