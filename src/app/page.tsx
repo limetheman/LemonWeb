@@ -141,11 +141,19 @@ export default function Home() {
           <Heading id="contact">
             Contact
           </Heading>
-          <Divider/>
+          <Divider my="15px"/>
           <SimpleGrid minChildWidth="50px" spacing={10}>
+          <Button colorScheme='teal' variant='outline'>Button</Button>
+          <Button colorScheme='teal' variant='outline'>Button</Button>
+          <Button colorScheme='teal' variant='outline'>Button</Button>
+          <Button colorScheme='teal' variant='outline'>Button</Button>
+          <Button colorScheme='teal' variant='outline'>Button</Button>
           </SimpleGrid>
         </Box>
       </Container>
+      <Box height="200px">
+
+      </Box>
     </Box>
   )
 }
