@@ -124,7 +124,7 @@ export default function Home() {
                 imgSrc="/BackToHue.png"
                 altSrc="Back To Hue Logo"
                 bodyText="Created a mobile application that helps connect with the people around you"
-                frameworkText="React-Native JavaScript Firebase"
+                frameworkText="React Native JavaScript Firebase"
                 link="https://back-to-hue-website-fy2r.vercel.app/index.html"
               />
             </Reveal>
@@ -134,7 +134,7 @@ export default function Home() {
                 imgSrc="/redenvelope.png"
                 altSrc="Red Envelope from Creazilla.com"
                 bodyText="Currently developing a mobile money transfer application, creating a satisfying and creative new way of celebrating New Years"
-                frameworkText="React-native JavaScript Dwolla"
+                frameworkText="React Native JavaScript Dwolla"
                 link="#"
               />
             </Reveal>
