@@ -25,14 +25,15 @@ export default function Home() {
           <Image src="/Selfie.jpg" alt="Selfie!" height="150px" borderRadius="full" alignSelf="center" margin="auto"/>
           <Divider margin="auto" width="20%" my="20px"/>
         </Flex>
-          <Flex justifyContent="center">
-            <Heading fontSize="4xl" fontWeight={100}>
+          <Flex align="center" flexDirection="column">
+            <Heading fontSize="4xl" fontWeight={100} noOfLines={1}>
               Interested in:
+            </Heading>
+            <Heading noOfLines={1}>
               <Tag fontSize="4xl" variant='subtle' colorScheme='blue'>
-                
                 <TypeAnimation
                   sequence={[
-                    "Full Stack Development",
+                    "Full Stack",
                     1000,
                     "React",
                     1000,
