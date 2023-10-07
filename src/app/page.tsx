@@ -1,5 +1,5 @@
 'use client'
-import { Box, Button, ChakraProvider, Divider, Heading, SlideFade, Container, Text, useDisclosure, Image, Flex, Skeleton, SimpleGrid, AbsoluteCenter } from "@chakra-ui/react";
+import { Box, Button, ChakraProvider, Divider, Heading, SlideFade, Container, Text, useDisclosure, Image, Flex, Skeleton, SimpleGrid, AbsoluteCenter, Highlight, Tag } from "@chakra-ui/react";
 import { CacheProvider } from "@emotion/react";
 import React from "react";
 import Navbar from "./Components/Navbar";
@@ -38,9 +38,26 @@ export default function Home() {
           </Reveal>
           <Divider margin="10px"/>
           <Flex justifyContent="center">
-            <Text 
-              fontSize="2xl">
-                
+            <Text fontSize="3xl" fontWeight={100}>
+              Interested in:
+              <Tag fontSize="4xl" variant='subtle' colorScheme='blue'>
+                <TypeAnimation
+                  sequence={[
+                    "Full Stack Development",
+                    1000,
+                    "React",
+                    1000,
+                    "Next-js",
+                    1000,
+                    "TypeScript",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  style={{display:'inline-block'}}
+                  repeat={Infinity}
+                  />
+              </Tag>
             </Text>
           </Flex>
           <Reveal>
