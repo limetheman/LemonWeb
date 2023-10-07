@@ -133,11 +133,11 @@ export default function Home() {
           </Heading>
           <Divider my="15px"/>
           <SimpleGrid minChildWidth="100px" spacing={5}>
-            <NextLink href="https://github.com/limetheman" passHref>
-              <Button colorScheme='black' variant='outline'>Github</Button>
+            <NextLink href="https://github.com/limetheman" passHref={true}>
+              <Button width="100%" colorScheme='grey' variant='outline'>Github</Button>
             </NextLink>
-            <NextLink href="mailto:tliemtran84@gmail.com" passHref>
-              <Button colorScheme="grey" variant="outline">Email</Button>
+            <NextLink href="mailto:tliemtran84@gmail.com" passHref={true}>
+              <Button width="100%" colorScheme="grey" variant="outline">Email</Button>
             </NextLink>
           </SimpleGrid>
         </Box>

@@ -1,5 +1,5 @@
 'use client'
-import { Box, Button, Divider, Flex, IconButton, Link, Menu, MenuButton, MenuItem, MenuList, TableContainer } from '@chakra-ui/react'
+import { Box, Button, Divider, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList, TableContainer } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { Icon } from '@chakra-ui/react'
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
@@ -18,8 +18,8 @@ export default function Navbar() {
         >
           <Flex
             display={['none', 'none', 'flex', 'flex']}>
-              <NextLink href="#" passHref>
-                <Button as="a"
+              <NextLink href="#" passHref={true}>
+                <Button 
                   variant="ghost"
                   aria-label="About"
                   my={5}
@@ -28,8 +28,8 @@ export default function Navbar() {
                   About
                 </Button>
               </NextLink>
-              <NextLink href="#experience" passHref>
-                <Button as="a"
+              <NextLink href="#experience" passHref={true}>
+                <Button 
                   variant="ghost"
                   aria-label="Experience"
                   my={5}
@@ -38,8 +38,8 @@ export default function Navbar() {
                   Experience
                 </Button>
               </NextLink>
-              <NextLink href="#projects" passHref>
-                <Button as="a"
+              <NextLink href="#projects" passHref={true}>
+                <Button 
                   variant="ghost"
                   aria-label="Projects"
                   my={5}
@@ -48,8 +48,8 @@ export default function Navbar() {
                   Projects
                 </Button>
               </NextLink>
-              <NextLink href="#contact" passHref>
-                <Button as="a"
+              <NextLink href="#contact" passHref={true}>
+                <Button 
                   variant="ghost"
                   aria-label="Contact"
                   my={5}
@@ -92,8 +92,8 @@ export default function Navbar() {
         <Flex
             flexDir="column"
             align="center">
-          <NextLink href="#" passHref>
-                <Button as="a"
+          <NextLink href="#" passHref={true}>
+                <Button 
                   variant="ghost"
                   aria-label="About"
                   my={5}
@@ -102,8 +102,8 @@ export default function Navbar() {
                   About
                 </Button>
               </NextLink>
-              <NextLink href="#experience" passHref>
-                <Button as="a"
+              <NextLink href="#experience" passHref={true}>
+                <Button 
                   variant="ghost"
                   aria-label="Experience"
                   my={5}
@@ -112,8 +112,8 @@ export default function Navbar() {
                   Experience
                 </Button>
               </NextLink>
-              <NextLink href="#projects" passHref>
-                <Button as="a"
+              <NextLink href="#projects" passHref={true}>
+                <Button 
                   variant="ghost"
                   aria-label="Projects"
                   my={5}
@@ -122,8 +122,8 @@ export default function Navbar() {
                   Projects
                 </Button>
               </NextLink>
-              <NextLink href="#contact" passHref>
-                <Button as="a"
+              <NextLink href="#contact" passHref={true}>
+                <Button 
                   variant="ghost"
                   aria-label="Contact"
                   my={5}
