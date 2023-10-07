@@ -30,7 +30,6 @@ export default function Home() {
           <Image src="/Selfie.jpg" alt="Selfie!" height="150px" borderRadius="full" alignSelf="center" margin="auto"/>
           <Divider margin="auto" width="20%" my="20px"/>
         </Flex>
-        <Container maxW='100%'>
         <Container marginTop="50px" maxW='100%'alignContent="center">
           <Flex justifyContent="center">
             <Heading fontSize="4xl" fontWeight={100}>
@@ -135,8 +134,6 @@ export default function Home() {
               />
             </Reveal>
           </SimpleGrid>
-
-        </Container>
         <Box maxW='100%'>
           <Heading id="contact">
             Contact
@@ -150,10 +147,10 @@ export default function Home() {
           <Button colorScheme='teal' variant='outline'>Button</Button>
           </SimpleGrid>
         </Box>
-      </Container>
       <Box height="200px">
 
       </Box>
+      </Container>
     </Box>
   )
 }
