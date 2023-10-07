@@ -131,7 +131,7 @@ export default function Home() {
             Contact
           </Heading>
           <Divider my="15px"/>
-          <SimpleGrid minChildWidth="50px" spacing={5}>
+          <SimpleGrid minChildWidth="100px" spacing={5}>
             <Button colorScheme='black' variant='outline'>Github</Button>
             <Button colorScheme="linkedin" variant='outline'>Linkedin</Button>
             <Button colorScheme='messenger' variant='outline'>Instagram</Button>
