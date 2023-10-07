@@ -51,6 +51,8 @@ export default function Home() {
                     1000,
                     "TypeScript",
                     1000,
+                    "MongoDB",
+                    1000,
                   ]}
                   wrapper="span"
                   speed={50}
