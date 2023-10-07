@@ -1,19 +1,140 @@
+'use client'
 import { Box, Button, Divider, Flex, IconButton, Link, Menu, MenuButton, MenuItem, MenuList, TableContainer } from '@chakra-ui/react'
-import React from 'react'
+import React, { useState } from 'react'
 import { Icon } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import { Container } from '@chakra-ui/react'
-
+import NextLink from 'next/link'
 
 
 export default function Navbar() {
+  const [display, changeDisplay] = useState("none");
   return (
-    <Flex as="nav" minHeight="10px" maxW="100%" justifyContent="space-between" alignItems="center">
-      <Link href='#aboutme' fontSize="lg">About Me</Link>
-      <Link href='#experience' fontSize="lg">Experience</Link>
-      <Link href='#' fontSize="lg" fontWeight="light">Liem Tran</Link>
-      <Link href='#projects' fontSize="lg">Projects</Link>
-      <Link href='#contact' fontSize="lg">Contact</Link>
+    <Flex align="center">
+      <Flex
+        pos="fixed"
+        top="1rem"
+        right="1rem"
+        >
+          <Flex
+            display={['none', 'none', 'flex', 'flex']}>
+              <NextLink href="#" passHref>
+                <Button as="a"
+                  variant="ghost"
+                  aria-label="About"
+                  my={5}
+                  w="100"
+                >
+                  About
+                </Button>
+              </NextLink>
+              <NextLink href="#experience" passHref>
+                <Button as="a"
+                  variant="ghost"
+                  aria-label="Experience"
+                  my={5}
+                  w="100"
+                >
+                  Experience
+                </Button>
+              </NextLink>
+              <NextLink href="#projects" passHref>
+                <Button as="a"
+                  variant="ghost"
+                  aria-label="Projects"
+                  my={5}
+                  w="100"
+                >
+                  Projects
+                </Button>
+              </NextLink>
+              <NextLink href="#contact" passHref>
+                <Button as="a"
+                  variant="ghost"
+                  aria-label="Contact"
+                  my={5}
+                  w="100"
+                >
+                  Contact
+                </Button>
+              </NextLink>
+          </Flex>
+          <IconButton
+            aria-label="Open Menu"
+            size="lg"
+            mr={2}
+            icon={<HamburgerIcon/>}
+            display= {['flex', 'flex', 'none', 'none']}
+            onClick={() => changeDisplay('flex')}
+          />
+        <Flex
+          w="100vw"
+          bgColor="gray.50"
+          zIndex={20}
+          h="100vh"
+          pos="fixed"
+          top="0"
+          left="0"
+          overflow="auto"
+          flexDir="column"
+          display={display}
+          >
+            <Flex justify="flex-end">
+              <IconButton
+                mt={2}
+                mr={2}
+                aria-label='Close Menu'
+                size="lg" 
+                icon={<CloseIcon/>}
+                onClick={() => changeDisplay('none')}
+                />
+            </Flex>
+        <Flex
+            flexDir="column"
+            align="center">
+          <NextLink href="#" passHref>
+                <Button as="a"
+                  variant="ghost"
+                  aria-label="About"
+                  my={5}
+                  w="100"
+                >
+                  About
+                </Button>
+              </NextLink>
+              <NextLink href="#experience" passHref>
+                <Button as="a"
+                  variant="ghost"
+                  aria-label="Experience"
+                  my={5}
+                  w="100"
+                >
+                  Experience
+                </Button>
+              </NextLink>
+              <NextLink href="#projects" passHref>
+                <Button as="a"
+                  variant="ghost"
+                  aria-label="Projects"
+                  my={5}
+                  w="100"
+                >
+                  Projects
+                </Button>
+              </NextLink>
+              <NextLink href="#contact" passHref>
+                <Button as="a"
+                  variant="ghost"
+                  aria-label="Contact"
+                  my={5}
+                  w="100"
+                >
+                  Contact
+                </Button>
+              </NextLink>
+          </Flex>
+        </Flex>
+      </Flex>
     </Flex>
   )
 }

@@ -6,16 +6,17 @@ import Navbar from "./Components/Navbar";
 import ProjectCard from "./Components/ProjectCard";
 import { TypeAnimation } from 'react-type-animation';
 import { Reveal } from "./Components/Reveal";
-import Link from "next/link";
-
+import NextLink from 'next/link'
 
 export default function Home() {
   return (
     <Box maxHeight="100%" bgGradient="linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% )">
       <Container as="div" maxW="80%">
       <Navbar />
+        <Box height={15}>
+
+        </Box>
         <Flex id="header" justifyContent={"center"}>
-        <Divider margin="10px"/>
           <Reveal>
             <Heading as="h1" size="2xl" my="10px" p="10px">
               👋Hi, My Name is Liem!
@@ -132,11 +133,12 @@ export default function Home() {
           </Heading>
           <Divider my="15px"/>
           <SimpleGrid minChildWidth="100px" spacing={5}>
-            <Button colorScheme='black' variant='outline'>Github</Button>
-            <Button colorScheme="linkedin" variant='outline'>Linkedin</Button>
-            <Button colorScheme='messenger' variant='outline'>Instagram</Button>
-            <Button colorScheme='twitter' variant='outline'>Twitter</Button>
-            <Button colorScheme='facebook' variant='outline'>Facebook</Button>
+            <NextLink href="https://github.com/limetheman" passHref>
+              <Button colorScheme='black' variant='outline'>Github</Button>
+            </NextLink>
+            <NextLink href="mailto:tliemtran84@gmail.com" passHref>
+              <Button colorScheme="grey" variant="outline">Email</Button>
+            </NextLink>
           </SimpleGrid>
         </Box>
       <Box height="200px">
