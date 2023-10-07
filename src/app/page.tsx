@@ -64,7 +64,7 @@ export default function Home() {
             </Heading>
           </Reveal>
           <Divider my="15px"/>
-          <SimpleGrid minChildWidth="300px" alignItems="center" margin="auto" spacing={10}>
+          <SimpleGrid minChildWidth="300px" spacing={10}>
               <Reveal>
                 <ProjectCard
                   headingText="Software Enginner Intern"
