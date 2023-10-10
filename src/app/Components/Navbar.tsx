@@ -104,6 +104,7 @@ export default function Navbar() {
                   aria-label="About"
                   my={5}
                   w="100"
+                  onClick={() => changeDisplay('none')}
                 >
                   About
                 </Button>
@@ -114,6 +115,7 @@ export default function Navbar() {
                   aria-label="Experience"
                   my={5}
                   w="100"
+                  onClick={() => changeDisplay('none')}
                 >
                   Experience
                 </Button>
@@ -124,6 +126,7 @@ export default function Navbar() {
                   aria-label="Projects"
                   my={5}
                   w="100"
+                  onClick={() => changeDisplay('none')}
                 >
                   Projects
                 </Button>
@@ -134,6 +137,7 @@ export default function Navbar() {
                   aria-label="Contact"
                   my={5}
                   w="100"
+                  onClick={() => changeDisplay('none')}
                 >
                   Contact
                 </Button>
