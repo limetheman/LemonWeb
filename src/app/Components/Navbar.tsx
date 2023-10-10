@@ -10,18 +10,21 @@ import NextLink from 'next/link'
 export default function Navbar() {
   const [display, changeDisplay] = useState("none");
   return (
-    <Flex align="center">
+    <Flex align="center" >
       <Flex
         pos="fixed"
         top="1rem"
         right="1rem"
+        zIndex={20}
         >
           <Flex
             display={['none', 'none', 'flex', 'flex']}
             border="1px"
+            backgroundColor="whiteAlpha.800"
             borderRadius="full"
+            padding="5px"
             >
-              <NextLink href="#" passHref={true}>
+              <NextLink href="#" passHref={true} >
                 <Button 
                   variant="ghost"
                   aria-label="About"
@@ -78,7 +81,7 @@ export default function Navbar() {
           pos="fixed"
           top="0"
           left="0"
-          overflow="auto"
+          overflowY="auto"
           flexDir="column"
           display={display}
           >

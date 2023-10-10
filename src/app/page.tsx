@@ -10,11 +10,10 @@ import NextLink from 'next/link'
 
 export default function Home() {
   return (
-    <Box maxHeight="100%" bgGradient="linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% )">
-      <Container as="div" maxW="80%">
+    <Box minHeight="100%" paddingTop="50px" bgGradient="linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% )">
       <Navbar />
+      <Container as="div" maxW="80%">
         <Box height={15}>
-
         </Box>
         <Flex id="header" justifyContent={"center"}>
           <Reveal>
