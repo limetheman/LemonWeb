@@ -2,7 +2,7 @@
 'use client'
 
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, ColorModeScript, ThemeConfig } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import { Lato } from 'next/font/google'
 
@@ -11,19 +11,21 @@ const nextFont = Lato({
   subsets:['latin'],
 })
 
-const colors = {
-  brand: {
-    900: "#FFFFFF"
-  }
+
+const config: ThemeConfig = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
 }
 
 export const theme = extendTheme({ 
-  colors,
+  config,
   fonts: {
     body: nextFont.style.fontFamily,
     heading: nextFont.style.fontFamily,
   }
 })
+
+
 
 export function Providers({ 
     children 
@@ -33,6 +35,7 @@ export function Providers({
   return (
     <CacheProvider>
       <ChakraProvider theme={theme}>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         {children}
       </ChakraProvider>
     </CacheProvider>

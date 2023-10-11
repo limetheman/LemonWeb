@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Providers } from './providers'
-import theme from './theme'
+import theme from './themelmao'
 import { ColorModeScript } from '@chakra-ui/react'
 
 export const metadata: Metadata = {
@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Providers>
           {children}
         </Providers>
