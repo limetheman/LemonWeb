@@ -6,6 +6,10 @@ import { Providers } from './providers'
 export const metadata: Metadata = {
   title: 'Liem-Dev',
   description: 'Learn about Me',
+
+  icons: {
+    icon: "/cutelemon.jpg"
+  }
 }
 
 export default function RootLayout({
