@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <Box minHeight="100%" paddingTop="50px" bgGradient={bg} color={color}>
       <Navbar navBg={nvbg}/>
-      <Button variant= "solid" display="flex" justifyContent="flex-start" onClick={toggleColorMode}>Wanna Change Colors?</Button>
+      <Button variant= "solid" display="flex" justifyContent="flex-start" onClick={toggleColorMode}>Change Colors?</Button>
       <Container as="div" maxW="80%">
         <Box height={15}>
         </Box>
