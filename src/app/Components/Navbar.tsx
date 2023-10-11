@@ -79,7 +79,7 @@ export default function Navbar(props: Props) {
           />
         <Flex
           w="100vw"
-          bgColor="gray.50"
+          bgColor="gray.400"
           zIndex={20}
           h="100vh"
           pos="fixed"
@@ -101,7 +101,8 @@ export default function Navbar(props: Props) {
             </Flex>
         <Flex
             flexDir="column"
-            align="center">
+            align="center"
+            >
           <NextLink href="#" passHref={true}>
                 <Button 
                   variant="ghost"
