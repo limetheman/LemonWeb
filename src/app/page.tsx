@@ -1,5 +1,5 @@
 'use client'
-import { Box, Button, ChakraProvider, Divider, Heading, SlideFade, Container, Text, useDisclosure, Image, Flex, Skeleton, SimpleGrid, AbsoluteCenter, Highlight, Tag, LinkOverlay } from "@chakra-ui/react";
+import { Box, Button, ChakraProvider, Divider, Heading, keyframes, SlideFade, Container, Text, useDisclosure, Image, Flex, Skeleton, SimpleGrid, AbsoluteCenter, Highlight, Tag, LinkOverlay, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { CacheProvider } from "@emotion/react";
 import React from "react";
 import Navbar from "./Components/Navbar";
@@ -8,10 +8,19 @@ import { TypeAnimation } from 'react-type-animation';
 import { Reveal } from "./Components/Reveal";
 import NextLink from 'next/link'
 
+
 export default function Home() {
+  const { toggleColorMode } = useColorMode();
+
+  const bg = useColorModeValue('linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% )', '#1a202c');
+  const color = useColorModeValue("black.400", "white.400")
+  const nvbg = useColorModeValue("white.800", "black.800")
+
+
   return (
-    <Box minHeight="100%" paddingTop="50px" bgGradient="linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% )">
-      <Navbar />
+    <Box minHeight="100%" paddingTop="50px" bgGradient={bg} color={color}>
+      <Navbar navBg={nvbg}/>
+      <Button variant= "solid" display="flex" justifyContent="flex-start" onClick={toggleColorMode}>Wanna Change Colors?</Button>
       <Container as="div" maxW="80%">
         <Box height={15}>
         </Box>
@@ -127,6 +136,7 @@ export default function Home() {
               />
             </Reveal>
           </SimpleGrid>
+        <Divider marginY="100px"/>
         <Box maxW='100%'>
           <Heading id="contact">
             Contact
@@ -141,7 +151,7 @@ export default function Home() {
             </NextLink>
           </SimpleGrid>
         </Box>
-      <Box height="200px">
+      <Box height="300px">
 
       </Box>
       </Container>

@@ -6,8 +6,12 @@ import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import { Container } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
+interface Props {
+  navBg: string
+}
 
-export default function Navbar() {
+
+export default function Navbar(props: Props) {
   const [display, changeDisplay] = useState("none");
   return (
     <Flex align="center" >
@@ -20,7 +24,7 @@ export default function Navbar() {
           <Flex
             display={['none', 'none', 'flex', 'flex']}
             border="1px"
-            backgroundColor="whiteAlpha.800"
+            backgroundColor={props.navBg}
             borderRadius="full"
             padding="5px"
             >

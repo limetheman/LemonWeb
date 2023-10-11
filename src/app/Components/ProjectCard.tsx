@@ -1,6 +1,6 @@
 
 'use client'
-import { Divider, Highlight, Image, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import { Divider, Highlight, Image, LinkBox, LinkOverlay, keyframes } from "@chakra-ui/react";
 import { Box, Button, Card, CardBody, CardFooter, CardHeader, Heading, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 
@@ -13,11 +13,44 @@ interface Props {
     link?: string,
 }
 
+
+const animation = keyframes `
+    from {
+  }
+
+    to {
+
+
+  }
+
+    10% {
+    transform: translate3d(0, -1px, 0);
+ }
+
+    20%, {
+        transform: translate3d(0, -2px, 0);
+    }
+
+    30%, {
+        transform:translate3d (0, -2px, 0)
+    }
+
+    40%,{
+        transform: translate3d(0, -4px, 0)
+    }
+ `;
+
+
 export default function ProjectCard(props: Props) {
+    const myAnimation = `${animation} 1s`;
+
     return(
-        <LinkBox as="div">
-            <LinkOverlay href={props.link}>
-            <Card maxW='lg' minH="lg" borderRadius="xl" boxShadow="base">
+        <LinkBox as="div" borderRadius="lg">
+            <LinkOverlay href={props.link} borderRadius="lg">
+            <Card maxW='lg' minH="lg" borderRadius="xl" boxShadow="base"
+                _hover={{
+                    animation: myAnimation
+                }}>
                 <CardBody>
                 <Image 
                     src= {props.imgSrc}
