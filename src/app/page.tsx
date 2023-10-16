@@ -9,6 +9,9 @@ import { Reveal } from "./Components/Reveal";
 import NextLink from 'next/link'
 
 
+
+
+
 export default function Home() {
   const { toggleColorMode } = useColorMode();
 
